@@ -1,0 +1,8 @@
+.content-layout {
+    /* background-color: #E7EFF5; */
+    height: 92%;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+}

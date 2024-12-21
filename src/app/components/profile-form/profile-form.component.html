@@ -1,0 +1,52 @@
+<div class="container-profile-config">
+    <div *ngIf="!loading else loadingTemplate">
+    <app-title [tittle]="tittle" [subtittle]="subtittle" [isMain]="true"></app-title>
+    <form class="frm" [formGroup]="register" (ngSubmit)="sendData()">
+        <div class="card-photo-component">
+            <app-photo-card></app-photo-card>
+        </div>
+        <div class="container-frm"> 
+            <div class="formulario">
+                <app-title [tittle]="tittleForm" [subtittle]="subtittleForm" [isMain]="false"></app-title>
+                <div class="input-container">
+                    <input formControlName="nombre" type="text"
+                      id="input" placeholder=" " required />
+                    <label for="input">Nombre*</label>
+                </div>
+                <div class="input-container">
+                    <select formControlName="pasatiempo">
+                        <option>Jugar Fútbol</option>
+                        <option>Jugar Basquetball</option>
+                        <option>Jugar Tennis</option>
+                        <option>Jugar Voleibol</option>
+                        <option>Jugar Fifa</option>
+                        <option>Jugar Videojuegos</option>
+                    </select>
+                    <label for="input">Pasatiempo favorito</label>
+                </div>
+                <div class="input-container">
+                    <input
+                      formControlName="cumpleanios" type="date" id="input"
+                      placeholder=" " required (change)="validateDate($event)"
+                    />
+                    <label for="input">Cumpleaños*</label>
+                </div>
+                <div class="input-container">
+                    <input
+                        formControlName="documento" type="text"
+                        id="input" [mask]="isMayor ? '00000000-0' : '00000000'" [placeholder]="isMayor ? '00000000-0' : '00000000'"
+                        required />
+                    <label for="input">Documento*</label>
+                </div>
+                <div class="container-btn">
+                    <button [ngClass]="!register.valid ? 'btn-disabled' : 'btn-enabled'"  >Continuar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <ng-template #loadingTemplate>
+        <app-loading></app-loading>
+    </ng-template>
+</div>

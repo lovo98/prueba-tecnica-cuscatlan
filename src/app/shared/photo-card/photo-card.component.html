@@ -1,0 +1,48 @@
+<div class="container">
+  <h2 *ngIf="currentUrl !== 'profile'; else trainer" [ngClass]="currentUrl !== '' ? 'color-name' : 'h2'">
+    {{currentUrl !== '' ? parsedData.nombre  : 'Imágen perfil'}}
+  </h2>
+  <ng-template #trainer>
+    <div class="trainer-header">
+      <span>Entrenador</span>
+      <img src="assets/medalla.png" alt="" srcset="">
+    </div>
+  </ng-template>
+    
+  <!-- Imagen de perfil -->
+  <div class="image-container">
+    <img
+      *ngIf="imageUrl"
+      [src]="imageUrl"
+      alt="Imagen de perfil"
+      class="profile-image"
+    />
+    <div *ngIf="!imageUrl" class="default-image">
+      <span class="placeholder-icon">
+      <fa-icon [icon]="faUser"></fa-icon>
+      </span>
+    </div>
+  </div>
+  
+  <!-- Archivo subido -->
+  <div *ngIf="uploadedFileName && currentUrl === ''" class="file-container">
+    <span class="file-name">{{ uploadedFileName }}</span>
+    <span class="delete-icon" (click)="removeImage()">
+      <fa-icon [icon]="faTrashCan"></fa-icon>
+    </span>
+  </div>
+  
+  <!-- Input para subir la imagen -->
+  <label *ngIf="!uploadedFileName"class="upload-label">
+    <input type="file" (change)="onImageSelected($event)" accept="image/*" />
+      Adjunta una foto
+    <fa-icon [icon]="faCloudArrowUp"></fa-icon>
+  </label>
+  <div *ngIf="parsedData.step !== 0 && currentUrl !== ''" class="card-data">
+    <div class="item-data"><strong>Pasatiempo:</strong> {{parsedData.pasatiempo}}</div>
+    <div class="item-data"><strong>Edad:</strong> {{parsedData.anios}} años</div>
+    <div class="item-data"><strong>{{parsedData.anios >= 18 ? 'DUI:' : 'Carnet Minoridad:'}}</strong> {{parsedData.documento}}</div>
+  </div>
+     
+</div>
+    

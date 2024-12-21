@@ -1,0 +1,19 @@
+<div class="container-profile-config">
+    <div class="card-photo-component">
+        <div class="name">
+            <span>¡Hola {{parsedData.nombre.split(' ')[0]}}!</span>
+            <button class="btn" (click)="redirectTo('/')">Editar Perfil</button>
+        </div>
+        <app-photo-card></app-photo-card>
+    </div>
+    <div class="container-frm"> 
+        <div class="formulario">
+            <div class="container-actions">
+                <app-title [tittle]="tittle" [subtittle]="subtittle" [isMain]="false"></app-title>
+                <button class="btn" (click)="redirectTo('/pokemon-selected')">Editar</button>
+            </div>
+            <app-pokemos-details></app-pokemos-details>
+        </div>
+    </div>
+</div>
+

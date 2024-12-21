@@ -1,0 +1,11 @@
+.container-header {
+    height: 8%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.container-header > img {
+    max-width: 138px;
+    padding: 10px 20px;
+}

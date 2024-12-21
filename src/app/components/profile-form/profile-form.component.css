@@ -1,0 +1,22 @@
+.container-profile-config {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 20px; */
+}
+
+.frm {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card-photo-component, .container-frm {
+    width: 45%;
+}
+
+.formulario {
+    width: 60%;
+}
+  

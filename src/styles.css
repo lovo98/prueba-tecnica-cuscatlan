@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .input-container {
+    position: relative;
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+  }
+  
+  .input-container input, .input-container select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #868686;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 300;
+    color: #868686;
+    background-color: #fff;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    pointer-events: none; 
+  }
+  
+  .input-container input:focus,
+  .input-container input:not(:placeholder-shown),
+  .input-container select:focus,
+  .input-container select:not(:placeholder-shown) {
+    border-color: #01426A;
+  }
+  
+  .input-container input:focus + label,
+  .input-container input:not(:placeholder-shown) + label,
+  .input-container select:focus + label,
+  .input-container select:not(:placeholder-shown) + label  {
+    top: 2px;
+    font-size: 14px;
+    color: #01426A;
+    font-weight: 600;
+  }
+  
+  .container-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-disabled {
+    padding: 15px 10px;
+    background-color: #E6E6E6;
+    color: #868686;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 65%;
+    cursor: not-allowed;
+  }
+  
+  .btn-enabled {
+    padding: 15px 10px;
+    background-color: #01426A;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 65%;
+    cursor: pointer;
+  }
+  

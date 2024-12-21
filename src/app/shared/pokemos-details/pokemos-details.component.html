@@ -1,0 +1,22 @@
+<div *ngFor="let pokemon of pokemonList" class="pokemon-card">
+  <div class="pokemon-card__image">
+    <img [src]="pokemon.imageUrl" [alt]="pokemon.name" />
+    <div>
+      <h2 class="pokemon-card__name">{{ pokemon.name }}</h2>
+      <p class="pokemon-card__type">{{ pokemon.types.join(' / ') }}</p>
+    </div>
+  </div>
+  <div class="pokemon-card__details">
+    <ul class="pokemon-card__stats">
+      <li *ngFor="let stat of getStats(pokemon)">
+        <span>{{ stat.label }}</span>
+        <div class="pokemon-card__stat-bar">
+          <div 
+            class="pokemon-card__stat-bar-inner" 
+            [ngStyle]="{'background-color': getTypeColor(pokemon.types[0]), 'width.%': stat.value}">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

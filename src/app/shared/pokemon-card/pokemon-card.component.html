@@ -1,0 +1,12 @@
+<div
+  class="pokemon-card"
+  [class.selected]="isSelected"
+  [class.disabled]="isDisabled"
+  (click)="toggleSelection()"
+>
+  <img [src]="imageUrl" [alt]="name" class="pokemon-image" />
+  <div class="pokemon-info">
+    <span class="pokemon-id">{{ id }}</span>
+    <span class="pokemon-name">{{ name }}</span>
+  </div>
+</div>

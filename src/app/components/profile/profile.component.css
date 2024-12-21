@@ -1,0 +1,47 @@
+.container-profile-config {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 20px; */
+}
+
+.container-frm {
+    overflow-y: auto;
+    height: 80vh;
+}
+
+.frm {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card-photo-component, .container-frm {
+    width: 45%;
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn{
+    background-color: #fff;
+    color: #01426A;
+    border: 1px solid #01426A;
+    border-radius: 8px;
+    padding: 6px 40px;
+    cursor: pointer;
+}
+
+.container-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

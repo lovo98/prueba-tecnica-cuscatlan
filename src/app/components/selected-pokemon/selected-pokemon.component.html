@@ -1,0 +1,39 @@
+<div *ngIf="!loading; else loadingPage"  class="container-profile-config">
+    <app-title [tittle]="tittle" [subtittle]="subtittle" [isMain]="true"></app-title>
+    <div class="frm">
+        <div class="card-photo-component">
+            <app-photo-card></app-photo-card>
+        </div>
+        <div class="container-frm"> 
+            <div class="formulario">
+                <app-title [tittle]="tittleTable" [subtittle]="subtittleTable" [isMain]="false"></app-title>
+                <app-input-search (search)="onSearch($event)"></app-input-search>
+                <div class="pokemon-container">
+                    <app-pokemon-card
+                        *ngFor="let pokemon of pokemons"
+                        [id]="pokemon.id"
+                        [name]="pokemon.name"
+                        [imageUrl]="pokemon.imageUrl"
+                        [isSelected]="pokemon.isSelected"
+                        [isDisabled]="selectedPokemons.length >= 3 && !pokemon.isSelected"
+                        (click)="toggleSelection(pokemon)"
+                        >
+                    </app-pokemon-card>
+
+                </div>
+                <div class="notFound" *ngIf="pokemons.length === 0">
+                    No se encontro Pokémon.
+                </div>
+                <div class="container-btn">
+                    <button [ngClass]="selectedPokemons.length < 3 ? 'btn-disabled' : 'btn-enabled'"  
+                        (click)="nextPage()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #loadingPage>
+    <app-loading></app-loading>
+</ng-template>
+

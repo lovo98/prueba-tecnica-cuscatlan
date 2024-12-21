@@ -1,0 +1,20 @@
+div {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 85vh;
+    width: 100vw;
+    flex-direction: column;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+h2 {
+    text-align: center; 
+    margin: 0;
+    color: #185A7D;
+}
+  
