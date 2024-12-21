@@ -39,12 +39,15 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
    git clone https://github.com/lovo98/prueba-tecnica-cuscatlan.git
 
 2. **Entra en la carpeta del proyecto**
+    ```bash
     cd nombre-del-proyecto
 
 3. **nstala las dependencias del proyecto**
+    ```bash
     npm install
 
 4. **Ejecuta el proyecto en tu máquina local:** Una vez instaladas las dependencias, ejecuta el siguiente comando para levantar el servidor de desarrollo
+    ```bash
     ng serve
 
     Luego, abre tu navegador y navega a http://localhost:4200/ para ver la aplicación en funcionamiento.
@@ -53,7 +56,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 Este proyecto utiliza las siguientes dependencias:
 
-FontAwesome: Para usar iconos en la aplicación.
-Google Fonts: Para cargar tipografía personalizada.
-CSS: Para la gestión de estilos y diseño en la aplicación.
-PokeAPI: Para obtener los datos de los Pokémon.
+- FontAwesome: Para usar iconos en la aplicación.
+- Google Fonts: Para cargar tipografía personalizada.
+- CSS: Para la gestión de estilos y diseño en la aplicación.
+- PokeAPI: Para obtener los datos de los Pokémon.
